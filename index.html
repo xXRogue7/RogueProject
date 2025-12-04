@@ -18,8 +18,110 @@
    <meta http-equiv="cache-control" content="private" />
    <link rel="stylesheet" href="desplegable.css">
    <link rel="shortcut icon" type="image/x-icon" href="logo.ico"> 
-    
-   
+    <style>
+      :root {
+      --bg: #0a0b10;
+      --text: #e8f0ff;
+      --accent: #6cf3ff;
+      --accent2: #ff4fd8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% 20%, rgba(108,243,255,0.12), transparent 60%),
+                  radial-gradient(900px 500px at 80% 60%, rgba(255,79,216,0.12), transparent 60%),
+                  var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+    }
+    .banner {
+      width: min(1100px, 92vw);
+      aspect-ratio: 16 / 5;
+      border-radius: 20px;
+      position: relative;
+      overflow: hidden;
+      background:
+        linear-gradient(0deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)),
+        #05060a;
+      box-shadow:
+        0 30px 80px rgba(0,0,0,0.6),
+        inset 0 0 0 1px rgba(255,255,255,0.06);
+    }
+    /* Neon grid lines */
+    .banner::before, .banner::after {
+      content: "";
+      position: absolute;
+      inset: -200%;
+      background:
+        repeating-linear-gradient(90deg, rgba(108,243,255,0.14) 0 2px, transparent 2px 60px),
+        repeating-linear-gradient(0deg, rgba(255,79,216,0.14) 0 2px, transparent 2px 60px);
+      filter: blur(3px);
+      transform: rotate(6deg);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+    .banner::after {
+      transform: rotate(-8deg);
+      opacity: 0.15;
+    }
+    /* Title styling */
+    .title {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      letter-spacing: 0.6px;
+    }
+    .title h1 {
+      margin: 0;
+      font-size: clamp(40px, 7vw, 96px);
+      font-weight: 800;
+      line-height: 1.05;
+      text-transform: none;
+      color: var(--text);
+      /* Futuristic neon effect */
+      text-shadow:
+        0 0 4px rgba(232,240,255,0.8),
+        0 0 16px rgba(108,243,255,0.45),
+        0 0 32px rgba(255,79,216,0.25);
+    }
+    .title .glow {
+      display: inline-block;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 10px rgba(108,243,255,0.5));
+    }
+    /* Subtext */
+    .subtitle {
+      margin-top: 14px;
+      font-size: clamp(14px, 2.5vw, 20px);
+      opacity: 0.85;
+    }
+    /* Decorative light streaks */
+    .streak {
+      position: absolute;
+      height: 3px;
+      width: 50%;
+      background: linear-gradient(90deg, transparent, var(--accent), transparent);
+      top: 18%;
+      left: 8%;
+      filter: blur(0.6px);
+      opacity: 0.6;
+    }
+    .streak.s2 {
+      top: 82%;
+      left: 42%;
+      background: linear-gradient(90deg, transparent, var(--accent2), transparent);
+      width: 40%;
+      opacity: 0.5;
+    }
+     </style>
   </head>
    <!-- Aqui empieza el cuerpo -->
    <body style="background-color: turquoise;">
@@ -34,7 +136,14 @@
           </li>
         </ul>
       </nav>
-
+     <section class="banner" role="banner" aria-label="Banner de RogueProject">
+    <div class="title">
+      <h1><span class="glow">Rogue</span>Project</h1>
+      <div class="subtitle">Página de videojuegos</div>
+    </div>
+    <div class="streak" aria-hidden="true"></div>
+    <div class="streak s2" aria-hidden="true"></div>
+  </section>
 
      
     <a href="https://xxrogue7.github.io/GamesRogue.github.io/">GamesRogue</a> © 2025 by <a href="https://creativecommons.org">M</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc/4.0/">CC BY-NC 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/nc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
@@ -43,6 +152,7 @@
    </body>
 
 </html>
+
 
 
 
