@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Batman: Arkham</title>
+  <style>
+    :root {
+      --col-left-width: 28%;
+      --col-right-width: 72%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #fff;
+      color: #111;
+    }
+
+    .header {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .banner {
+      background-image: url('banner-batman.jpg'); /* Reemplaza con tu imagen */
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+      margin-bottom: 32px;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      background: #ddd;
+      border-bottom: 1px solid #ccc;
+      width: 100%;
+      margin-bottom: 32px;
+    }
+
+    .menu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+
+    .menu ul li {
+      position: relative;
+    }
+
+    .menu > ul > li > a,
+    .menu > ul > li {
+      display: block;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: #000;
+      background: #eee;
+      border-right: 1px solid #ccc;
+      font-weight: bold;
+    }
+
+    .menu > ul > li:last-child {
+      border-right: none;
+    }
+
+    .menu > ul > li:hover {
+      background: #fff;
+      cursor: pointer;
+    }
+
+    .menu ul li ul {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background: #f6f6f6;
+      border: 1px solid #ccc;
+      width: 200px;
+      z-index: 10;
+    }
+
+    .menu ul li:hover ul {
+      display: block;
+    }
+
+    .menu ul li ul li {
+      border-bottom: 1px solid #ccc;
+    }
+
+    .menu ul li ul li a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #000;
+      background: #fff;
+    }
+
+    .menu ul li ul li a:hover {
+      background: #888;
+      color: #fff;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 0;
+    }
+
+    td {
+      border: none;
+      vertical-align: top;
+      padding: 0;
+    }
+
+    .col-left {
+      width: var(--col-left-width);
+    }
+    .col-right {
+      width: var(--col-right-width);
+      padding-left: 24px;
+    }
+
+    .cover {
+      display: block;
+      width: 100%;
+      max-width: 220px;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      background: #f5f5f5;
+    }
+
+    .desc {
+      display: grid;
+      gap: 6px;
+      line-height: 1.45;
+    }
+    .title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    .meta {
+      color: #444;
+    }
+    .price {
+      font-weight: 700;
+    }
+
+    .divider td {
+      padding: 16px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    @media (max-width: 640px) {
+      table, tbody, tr, td {
+        display: block;
+        width: 100%;
+      }
+      .col-right {
+        padding-left: 0;
+        margin-top: 12px;
+      }
+      .cover {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <div class="banner">
+      Batman: Arkham
+    </div>
+
+    <nav class="menu">
+     <ul>
+    <li><a href="index.html">INICIO</a></li>
+    <li><a href="registro.html">REGISTRO</a></li>
+    <li>SAGAS
+      <ul>
+        <li><a href="assassinscreed.html">ASSASSIN'S CREED</a></li>
+        <li><a href="tombraider.html">TOMB RAIDER</a></li>
+        <li><a href="tlou.html">THE LAST OF US</a></li>
+        <li><a href="#">BATMAN</a></li>
+      </ul>
+    </li>
+  </ul>
+    </nav>
+
+    <table aria-label="Tabla de juegos Batman Arkham">
+      <tbody>
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="arkhamasylum.png" alt="Portada Batman: Arkham Asylum" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">BATMAN: ARKHAM ASYLUM (2009)</h3>
+              <div><span class="price">Sinopsis:</span> *Batman: Arkham Asylum* es un juego de acción y aventura donde Batman debe enfrentar a sus archienemigos, como el Joker, quien ha tomado control del manicomio de Arkham. Mientras Batman trata de detener a sus enemigos, se encuentra atrapado en un entorno lleno de locura, enfrentando a peligrosas criaturas y resolviendo acertijos, todo mientras desvela oscuros secretos sobre la institución y su propio pasado.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, Xbox 360, PC, Mac OS X, PlayStation 4, Xbox One (remasterizado)</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="arkhamcity.png" alt="Portada Batman: Arkham City" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">BATMAN: ARKHAM CITY (2011)</h3>
+              <div><span class="price">Sinopsis:</span> En *Batman: Arkham City*, Batman se enfrenta a una nueva amenaza cuando Gotham City se ve transformada en una gigantesca prisión. Allí, el Joker y otros villanos tienen control sobre la ciudad, y Batman debe detenerlos mientras desentraña los secretos de Arkham City y lucha contra una conspiración mucho mayor que involucra a todos los criminales más notorios de Gotham.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 3, Xbox 360, PC, Mac OS X, PlayStation 4, Xbox One (remasterizado)</div>
+            </div>
+          </td>
+        </tr>
+        <tr class="divider"><td colspan="2"></td></tr>
+
+        <tr>
+          <td class="col-left">
+            <img class="cover" src="arkhamknight.png" alt="Portada Batman: Arkham Knight" />
+          </td>
+          <td class="col-right">
+            <div class="desc">
+              <h3 class="title">BATMAN: ARKHAM KNIGHT (2015)</h3>
+              <div><span class="price">Sinopsis:</span> *Batman: Arkham Knight* concluye la saga de Arkham. Batman debe enfrentar al misterioso **Arkham Knight**, un nuevo villano con conocimientos profundos sobre el Caballero Oscuro. Mientras Gotham se sume en el caos, Batman se ve obligado a hacer frente a sus propios demonios, tomar decisiones difíciles y luchar por salvar la ciudad que tanto ama.</div>
+              <div class="meta"><strong>Plataformas:</strong> PlayStation 4, Xbox One, PC</div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</body>
+</html>
